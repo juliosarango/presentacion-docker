@@ -48,3 +48,12 @@
     margin-top: 2px;
     margin-bottom: 30px;
 }
+
+#docker-history {
+    width: 570px;
+    margin-left: 150px;
+}
+
+#dockerfile {
+    color: white;
+}

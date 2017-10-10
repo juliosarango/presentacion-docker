@@ -43,14 +43,14 @@
                                 <li>Dockerfile</li>                            
                             </ul>
                         </li>    
-			<li>Contenedores</li>
+                        <li>Capas de una imagen</li>			
 			<li>Caso de uso: Ambiente de Desarrollo SERCOP</li>
 			<li>Instalar drupal 8</li>
 		</ol>	
 	</section>
 
 	<section class="slide">
-		<h2>Qué es docker?</h2>
+		<h2>¿Qué es docker?</h2>
                 <figure>
                     <img src="pictures/que-es.jpg" alt="container" id="imagen">
                 </figure>
@@ -58,7 +58,7 @@
 	</section>
 
 	<section class="slide">
-		<h2>Por qué usar docker?</h2>
+		<h2>¿Por qué usar docker?</h2>
                 <ol>
                     <li>Tener un único entorno de Desarrollo</li>
                     <li class="next">No más: "En mi máquina si funciona"</li>
@@ -118,46 +118,45 @@
 	</section>
 
 	<section class="slide">
-		<h2>Capas de una imagen</h2>
-		
-		<pre>
-			<code>docker history xxx</code>
-			<code>docker run -ti xxx bash</code>			
+		<h2>Capas de una imagen</h2>                
+                <pre>
+		    <code>docker history xxx</code>			
+		</pre>
+                <figure>
+                    <img src="pictures/docker-history.png" alt="docker history" id="docker-history">			
+		</figure>		
+		<pre>		
+                    <code>docker run -ti xxx bash</code>			
 		</pre>
 	</section>
 
 	<section class="slide" id="picture">
-		<h2>Pictures</h2>
-		<figure>
-			<img class="cover" src="pictures/picture.jpg" alt="Orange typewriter on a wooden table close-up">
-			<figcaption class="white">
-				<a href="http://fiftyfootshadows.net/">© John Carey</a>
-			</figcaption>
-		</figure>
-		<style>
-			#picture h2 {
-				color:#FFF;
-				}
-		</style>
+		<h2>CU: Ambiente de Desarrollo SERCOP</h2>
+                <ol>
+                    <li>Manual de instalación. Más de dos hojas. </li>
+                    <li class="next">Versión máxima de php 5.6.x.</li>
+                    <li class="next">Aplica solo para fedora/centos.</li>
+                    <li class="next">Problemas al actualizar SO.</li>
+                    <li class="next">En mi máquina si funciona.</li>
+		</ol>                		
 	</section>
 
 	<section class="slide">
-		<h2 class="shout shrink">You can even shout this way</h2>
+            <object width="800" height="500" data="files/manual.pdf"></object> 
+		<!-- <h2 class="shout shrink">You can even shout this way</h2>-->
 	</section>
 
 	<section class="slide">
-		<h2>Inner navigation</h2>
+		<h2>Solución</h2>
 		<ol>
-			<li>Lets you reveal list items one by one</li>
-			<li class="next">To keep some key points</li>
-			<li class="next">In secret from audience</li>
-			<li class="next">But it will work only once</li>
-			<li class="next">Nobody wants to see the same joke twice</li>
+			<li>Dockerfile con todas las instrucciones del manual</li>
+			<li class="next">Carpeta local con los archivos .rpm</li>
+			<li class="next">Configuraciones necesarias.</li>			
 		</ol>
 	</section>
 
-	<section class="slide grid">
-		<h2>All nicely aligned to grid</h2>
+	<section class="slide">
+            <object width="800" height="500" data="files/Dockerfile" id="dockerfile"></object> 		
 	</section>
 
 	<section class="slide" id="see-more">
