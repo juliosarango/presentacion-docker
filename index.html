@@ -37,98 +37,93 @@
 		<ol>
 			<li>Qué es docker?</li>
 			<li>Por qué usar docker?</li>
-			<li>Imágenes y Dockerfile</li>
-			<li>Contenedores y docker-composer</li>
+			<li>Imágenes.
+                            <ul>
+                                <li>Docker commit</li>
+                                <li>Dockerfile</li>                            
+                            </ul>
+                        </li>    
+			<li>Contenedores</li>
 			<li>Caso de uso: Ambiente de Desarrollo SERCOP</li>
 			<li>Instalar drupal 8</li>
+		</ol>	
+	</section>
+
+	<section class="slide">
+		<h2>Qué es docker?</h2>
+                <figure>
+                    <img src="pictures/que-es.jpg" alt="container" id="imagen">
+                </figure>
+                
+	</section>
+
+	<section class="slide">
+		<h2>Por qué usar docker?</h2>
+                <ol>
+                    <li>Tener un único entorno de Desarrollo</li>
+                    <li class="next">No más: "En mi máquina si funciona"</li>
+                    <li class="next">No "ensuciar" mi equipo.</li>
+                    <li class="next">Desarrolladores se centran en su código</li>                    
 		</ol>
-		<p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
+		
+	</section>
+    
+        <section class="slide">
+		<h2>Docker vs VM</h2>
+                <figure>
+                    <img src="pictures/vm-vs-docker.png" alt="container" id="docker-vm">
+                </figure>
+            <p class="note">Fuente: https://www.edureka.co/blog/what-is-docker-container</p>
+    
 	</section>
 
 	<section class="slide">
-		<h2>Plain text on your slides</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
+		<h2>Imágenes</h2>
+                <figure>
+                    <img src="pictures/dockerimages.png" alt="docker images" id="docker-images">
+                </figure>
+		
 	</section>
 
 	<section class="slide">
-		<h2>Two columns if you like</h2>
-		<p class="double">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+		<h2>docker commit</h2>
+                <ol>
+                    <li>Ejecutar una imagen base</li>
+                    <li class="next">Realizar los cambios necesarios: Instalar vim, crear directorio config, crear directorio config2.</li>
+                    <li class="next">docker diff</li>
+                    <li class="next">docker commit.</li>                    
+		</ol>	
+                <p class="note">docker commit XXX test_phpday</p>
+	</section>
+        <section class="slide">
+		
+                <video id="video" width="820" height="520" controls>
+                    <source src="videos/docker-commit.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video> 		
 	</section>
 
 	<section class="slide">
-		<h2>All kind of lists</h2>
-		<ol>
-			<li>Simple lists are marked with bullets</li>
-			<li>Ordered lists begin with a number</li>
-			<li>You can even nest lists one inside another
-				<ul>
-					<li>Or mix their types</li>
-					<li>But do not go too far</li>
-					<li>Otherwise audience will be bored</li>
-				</ul>
-			</li>
-			<li>Look, seven rows exactly!</li>
-		</ol>
-	</section>
-
-	<section class="slide">
-		<h2>Serious citations</h2>
-		<figure>
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-			</blockquote>
-			<figcaption>Marcus Tullius Cicero</figcaption>
-		</figure>
-	</section>
-
-	<section class="slide">
-		<h2>Code samples</h2>
+		<h2>Dockerfile</h2>
 		<pre>
-			<code>&lt;!DOCTYPE html&gt;</code>
-			<code class="mark">&lt;html lang="en"&gt;</code>
-			<code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Comment--&gt;</span></code>
-			<code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-			<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-			<code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-			<code><mark>&lt;/head&gt;</mark></code>
+			<code>FROM centos</code>
+			<code>RUN yum -y install vim</code>
+			<code>RUN mkdir config</code>
+			<code>ADD ./files/config /config</code>
+			<code>RUN mkdir usuarios</code>
+			<code>ADD ./files/usuarios /usuarios</code>
+                        <code>RUN yum -y install emacs</code>
 		</pre>
+                <p class="note">docker build -t test_vim_emacs .</p>
 	</section>
 
 	<section class="slide">
-		<h2>Even tables</h2>
-		<table>
-		<tr>
-			<th scope="col">Locavore</th>
-			<th>Umami</th>
-			<th>Helvetica</th>
-			<th>Vegan</th>
-		</tr>
-		<tr>
-			<th scope="row">Fingerstache</th>
-			<td>Kale</td>
-			<td>Chips</td>
-			<td>Keytar</td>
-		</tr>
-		<tr>
-			<th scope="row">Sriracha</th>
-			<td>Gluten-free</td>
-			<td>Ennui</td>
-			<td>Keffiyeh</td>
-		</tr>
-		<tr>
-			<th scope="row">Thundercats</th>
-			<td>Jean</td>
-			<td>Shorts</td>
-			<td>Biodiesel</td>
-		</tr>
-		<tr>
-			<th scope="row">Terry</th>
-			<td>Richardson</td>
-			<td>Swag</td>
-			<td>Blog</td>
-		</tr>
-		</table>
-		<p>It’s good to have information organized.</p>
+		<h2>Capas de una imagen</h2>
+		
+		<pre>
+			<code>docker history xxx</code>
+			<code>docker run -ti xxx bash</code>			
+		</pre>
 	</section>
 
 	<section class="slide" id="picture">
