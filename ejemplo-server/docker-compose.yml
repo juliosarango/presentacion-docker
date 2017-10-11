@@ -4,6 +4,6 @@ services:
       build: .
       ports:
          - "80:80"
-      image: jsarangoq/apache-php
+      image: jsarangoq
       volumes:
        - ./code/:/var/www/html/
