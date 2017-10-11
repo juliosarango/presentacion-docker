@@ -1,0 +1,10 @@
+version: "2"
+
+services:
+  test_phpday:  
+    build: . 
+    image: jsarangoq/apache-php    
+    ports:
+      - "80:80"      
+    volumes:
+      - ./code/:/var/www/html/

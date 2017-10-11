@@ -32,6 +32,13 @@
     margin-left: 150px;
 }
 
+#imagen-contenedor {
+    margin-top: 30px;
+    margin-left: 150px;
+    margin-bottom: 80px;
+    height: 200px;
+}
+
 #docker-vm {
     height: 400px;
     margin-left: 150px;
@@ -56,4 +63,28 @@
 
 #dockerfile {
     color: white;
+}
+
+#docker-compose {
+    width: 500px;
+    height: 400px;
+    margin-left: 150px;
+}
+
+h2.gracias {
+    font-size: 110px;
+}
+
+#nombre {
+    margin-top: 50px;
+    text-align: center;
+}
+
+#email {
+    text-align: center;
+}
+
+#docker-volumes {
+    width: 700px;
+    margin-left: 60px;
 }

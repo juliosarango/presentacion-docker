@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Shower Presentation Engine</title>
+	<title>Docker como entorno de Desarrollo</title>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,15 +9,10 @@
 	<link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css">
 </head>
 <body class="shower list">
-
-	<header class="caption">
-		<h1>Shower Presentation Engine</h1>
-		<p>Yours Truly, Famous Inc.</p>
-	</header>
-
+	
 	<section class="camp slide" id="picture">
 		<figure>
-			<img class="cover1" src="pictures/logo-drupalcamp.png" alt="Drupal camp">
+			<img class="cover1" src="shower/pictures/logo-drupalcamp.png" alt="Drupal camp">
 		</figure>
 	</section>
 
@@ -27,7 +22,7 @@
 		</div>
 		<div class="">
 			<figure>
-			  <img class="cover" src="pictures/docker.png" alt="docker">
+			  <img class="cover" src="shower/pictures/docker.png" alt="docker">
 		 	</figure>
 		</div>
 	</section>
@@ -35,28 +30,32 @@
 	<section class="slide">
 		<h2>Agenda</h2>
 		<ol>
-			<li>Qué es docker?</li>
-			<li>Por qué usar docker?</li>
-			<li>Imágenes.
-                            <ul>
-                                <li>Docker commit</li>
-                                <li>Dockerfile</li>                            
-                            </ul>
-                        </li>    
-                        <li>Capas de una imagen</li>			
-			<li>Caso de uso: Ambiente de Desarrollo SERCOP</li>
-			<li>Instalar drupal 8</li>
+                    <li>Qué es docker?</li>
+                    <li>Por qué usar docker?</li>
+                    <li>Imágenes con Docker commit y Dockerfile</li>    
+                    <li>Capas de una imagen</li>			
+                    <li>Caso de uso: Ambiente de Desarrollo SERCOP</li>
+                    <li>Docker compose.</li>
+                    <li>Instalar drupal 8.</li>
+                    <li>Recomendaciones</li>
 		</ol>	
 	</section>
 
 	<section class="slide">
 		<h2>¿Qué es docker?</h2>
                 <figure>
-                    <img src="pictures/que-es.jpg" alt="container" id="imagen">
+                    <img src="shower/pictures/que-es.jpg" alt="container" id="imagen">
                 </figure>
                 
 	</section>
-
+        <section class="slide">
+            <h2>Imágenes y Contenedores</h2>
+            <figure>
+                <img src="shower/pictures/imagen-contenedores.png" alt="Imágenes y contenedores" id="imagen-contenedor">
+            </figure>
+            <p class="note">Fuente: https://guiadev.com/introduccion-a-docker/</p>    
+	</section>
+    
 	<section class="slide">
 		<h2>¿Por qué usar docker?</h2>
                 <ol>
@@ -71,7 +70,7 @@
         <section class="slide">
 		<h2>Docker vs VM</h2>
                 <figure>
-                    <img src="pictures/vm-vs-docker.png" alt="container" id="docker-vm">
+                    <img src="shower/pictures/vm-vs-docker.png" alt="container" id="docker-vm">
                 </figure>
             <p class="note">Fuente: https://www.edureka.co/blog/what-is-docker-container</p>
     
@@ -80,7 +79,7 @@
 	<section class="slide">
 		<h2>Imágenes</h2>
                 <figure>
-                    <img src="pictures/dockerimages.png" alt="docker images" id="docker-images">
+                    <img src="shower/pictures/dockerimages.png" alt="docker images" id="docker-images">
                 </figure>
 		
 	</section>
@@ -98,7 +97,7 @@
         <section class="slide">
 		
                 <video id="video" width="820" height="520" controls>
-                    <source src="videos/docker-commit.mp4" type="video/mp4">
+                    <source src="shower/videos/docker-commit.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video> 		
 	</section>
@@ -123,11 +122,19 @@
 		    <code>docker history xxx</code>			
 		</pre>
                 <figure>
-                    <img src="pictures/docker-history.png" alt="docker history" id="docker-history">			
+                    <img src="shower/pictures/docker-history.png" alt="docker history" id="docker-history">			
 		</figure>		
 		<pre>		
                     <code>docker run -ti xxx bash</code>			
 		</pre>
+	</section>
+    
+        <section class="slide">
+		<h2>Volúmenes</h2>                                
+                <figure>
+                    <img src="shower/pictures/docker-volume.png" alt="docker volumes" id="docker-volumes">			
+		</figure>		
+		<p class="note">Fuente: http://collabnix.com/docker-1-12-swarm-mode-persistent-storage-using-nfs/</p>
 	</section>
 
 	<section class="slide" id="picture">
@@ -142,8 +149,7 @@
 	</section>
 
 	<section class="slide">
-            <object width="800" height="500" data="files/manual.pdf"></object> 
-		<!-- <h2 class="shout shrink">You can even shout this way</h2>-->
+            <object width="800" height="500" data="shower/files/manual.pdf"></object> 		
 	</section>
 
 	<section class="slide">
@@ -156,33 +162,36 @@
 	</section>
 
 	<section class="slide">
-            <object width="800" height="500" data="files/Dockerfile" id="dockerfile"></object> 		
+            <h2 class="shout shrink">Dockerfile</h2>
 	</section>
-
-	<section class="slide" id="see-more">
-		<h2 class="shout">
-			<img src="pictures/logo.svg" alt="Shower logo">
-			<a href="https://github.com/shower/shower">See more on GitHub</a>
-		</h2>
-		<style>
-			#see-more h2 {
-				font-size:100px
-				}
-			#see-more img {
-				width:0.72em;
-				height:0.72em;
-				}
-		</style>
+    
+        <section class="slide">
+            <h2>Docker compose</h2>
+            <figure>
+                <img src="shower/pictures/docker-compose.png" alt="docker compose" id="docker-compose">
+            </figure>
 	</section>
-
-	<footer class="badge">
-		<a href="https://github.com/shower/shower">Fork me on GitHub</a>
-	</footer>
-
+    
+        <section class="slide">
+            <h2 class="shout shrink">Instalar Drupal 8 con docker</h2>
+	</section>
+        
+        <section class="slide">
+            <h2>Recomendaciones</h2>
+            <ol>
+                <li>Probar docker para sus proyectos.</li>
+                <li class="next">Uso mínimo de capas al crear imágenes.</li>
+                <li class="next">Optimizar las imágenes.</li>			
+            </ol>
+	</section>
+    
+        <section class="slide">
+            <h2 class="gracias">Gracias.</h2>
+            <h3 id="nombre">Julio Sarango</h3>
+            <h3 id="email">jsarangoq@gmail.com</h3>
+	</section>
 	<div class="progress"></div>
-
-	<script src="shower/shower.min.js"></script>
-	<!-- Copyright © 2017 Yours Truly, Famous Inc. -->
+	<script src="shower/shower.min.js"></script>	
 
 </body>
 </html>
