@@ -1,5 +1,7 @@
 <?php 
-echo "Hola mundo desde docker <br>";
-for ($i = 0; $i < 30; $i++){
-	echo "Este es el saludo No. $i <br>";
+echo "<h1>Hola mundo desde docker</h1> <br>";
+for ($i = 0; $i < 10; $i++){
+	echo "<h2>Este es el saludo No. $i </h2>";
 }
+
+echo "<h3>Esta es una prueba del servidor de desarrollo...</h3>";

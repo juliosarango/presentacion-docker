@@ -1,0 +1,5 @@
+server: 192.168.100.1
+username: test
+passwprd: test123
+env: dev
+version: 1.0

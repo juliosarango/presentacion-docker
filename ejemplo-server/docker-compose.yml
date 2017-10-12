@@ -1,9 +1,8 @@
 version: '2'
 services:
-   prueba:
-      build: .
+   prueba: 
       ports:
          - "80:80"
-      image: jsarangoq
+      image: jsarangoq/apache-php
       volumes:
        - ./code/:/var/www/html/

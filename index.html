@@ -32,12 +32,13 @@
 		<ol>
                     <li>Qué es docker?</li>
                     <li>Por qué usar docker?</li>
-                    <li>Imágenes con Docker commit y Dockerfile</li>    
-                    <li>Capas de una imagen</li>			
-                    <li>Caso de uso: Ambiente de Desarrollo SERCOP</li>
+                    <li>Imágenes con Docker commit y Dockerfile.</li>    
+                    <li>Capas de una imagen.</li>	
+                    <li>Volúmenes.</li>
+                    <li>Caso de uso: Ambiente de Desarrollo SERCOP.</li>
                     <li>Docker compose.</li>
                     <li>Instalar drupal 8.</li>
-                    <li>Recomendaciones</li>
+                    <li>Recomendaciones.</li>
 		</ol>	
 	</section>
 
@@ -85,10 +86,10 @@
 	</section>
 
 	<section class="slide">
-		<h2>docker commit</h2>
+		<h2>Imágenes con docker commit</h2>
                 <ol>
                     <li>Ejecutar una imagen base</li>
-                    <li class="next">Realizar los cambios necesarios: Instalar vim, crear directorio config, crear directorio config2.</li>
+                    <li class="next">Realizar los cambios necesarios: Instalar vim, crear directorio config, crear directorio config2 e instalar emacs.</li>
                     <li class="next">docker diff</li>
                     <li class="next">docker commit.</li>                    
 		</ol>	
@@ -103,7 +104,7 @@
 	</section>
 
 	<section class="slide">
-		<h2>Dockerfile</h2>
+		<h2>Imágenes con Dockerfile</h2>
 		<pre>
 			<code>FROM centos</code>
 			<code>RUN yum -y install vim</code>
@@ -162,7 +163,7 @@
 	</section>
 
 	<section class="slide">
-            <h2 class="shout shrink">Dockerfile</h2>
+            <h2 class="shout shrink">Dockerfile Sercop</h2>
 	</section>
     
         <section class="slide">
@@ -173,7 +174,10 @@
 	</section>
     
         <section class="slide">
-            <h2 class="shout shrink">Instalar Drupal 8 con docker</h2>
+            <h2>Instalar Drupal 8 con docker</h2>
+            <h3>docker4drupal</h3>
+            
+            <p class="note">Fuente: https://docker4drupal.readthedocs.io/en/latest//</p>
 	</section>
         
         <section class="slide">
@@ -181,7 +185,7 @@
             <ol>
                 <li>Probar docker para sus proyectos.</li>
                 <li class="next">Uso mínimo de capas al crear imágenes.</li>
-                <li class="next">Optimizar las imágenes.</li>			
+                <li class="next">Mantenerse actualizado.</li>			
             </ol>
 	</section>
     
