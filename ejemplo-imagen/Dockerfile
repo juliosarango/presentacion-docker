@@ -1,8 +1,10 @@
 FROM centos
 LABEL maintainer 'julio sarango <jsarangoq@gmail.com>'
-RUN yum -y install vim
+#RUN yum -y install vim &&  yum -y install emacs     
 RUN mkdir config 
-ADD ./files/config /config
 RUN mkdir usuarios
-ADD ./files/usuarios /usuarios
-RUN yum -y install emacs
+ADD ./files/config /config/ 
+ADD ./files/usuarios /usuarios/
+
+
+
